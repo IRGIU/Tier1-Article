@@ -167,6 +167,36 @@
             opacity: 0.8;
         }
 
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            margin-bottom: 40px;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateX(-5px);
+        }
+
+        .back-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover svg {
+            transform: translateX(-3px);
+        }
+
         .footer {
             margin-top: 80px;
             padding-top: 40px;
@@ -208,6 +238,13 @@
 </head>
 <body>
     <div class="container">
+        <a href="https://irgiu.github.io/Contents-Page/" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M16 10H4M4 10L10 16M4 10L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Back to Contents</span>
+        </a>
+
         <div class="header">
             <div class="org-name">CANVI IRGIU</div>
             <div class="doc-type">Article / Tier 1 Analysis</div>
