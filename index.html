@@ -197,7 +197,7 @@
             transform: translateX(-3px);
         }
 
-        .scroll-top {
+        .scroll-to-top {
             position: fixed;
             bottom: 40px;
             right: 40px;
@@ -217,19 +217,19 @@
             z-index: 1000;
         }
 
-        .scroll-top.visible {
+        .scroll-to-top.visible {
             opacity: 1;
             visibility: visible;
         }
 
-        .scroll-top:hover {
+        .scroll-to-top:hover {
             background: #000;
             color: #fff;
             transform: translateY(-5px);
         }
 
         @media (max-width: 768px) {
-            .scroll-top {
+            .scroll-to-top {
                 width: 40px;
                 height: 40px;
                 bottom: 20px;
@@ -396,22 +396,23 @@
             <div>© 2025 IRGIU / CANVI</div>
             <div>CONFIDENTIAL</div>
         </div>
-
-        <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
     </div>
 
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
     <script>
-        const scrollTopBtn = document.getElementById('scrollTop');
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
 
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
-                scrollTopBtn.classList.add('visible');
+                scrollToTopBtn.classList.add('visible');
             } else {
-                scrollTopBtn.classList.remove('visible');
+                scrollToTopBtn.classList.remove('visible');
             }
         });
 
-        scrollTopBtn.addEventListener('click', () => {
+        scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
